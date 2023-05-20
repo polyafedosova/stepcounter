@@ -11,6 +11,6 @@ Stepcounter - это инновационное мобильное прилож�
 
 # Обзор приложения
 
-* [Презентация](https://github.com/polyafedosova](https://github.com/polyafedosova/stepcounter/blob/master/documentation/Презентация%20шагомер.pdf)<br />
+* [Презентация](https://github.com/polyafedosova](https://github.com/polyafedosova/stepcounter/blob/master/documentation/Презентация%20шагомер.pdf) <br />
 
 * [Видео - обзор]()<br />

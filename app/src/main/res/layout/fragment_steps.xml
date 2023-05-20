@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.vsu.fedosova.stepcounter.ui.screens.activity_main.StepsFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:visibility="visible"
+            android:id="@+id/cardView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:backgroundTint="@color/heavy_clouds"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="5dp">
+
+
+                <TextView
+                    android:id="@+id/tvData"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-condensed"
+                    android:text="20.07.2022 13:00"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/tvCity"
+                    app:layout_constraintStart_toStartOf="@+id/tvCity"
+                    app:layout_constraintTop_toBottomOf="@+id/tvCity" />
+
+                <TextView
+                    android:id="@+id/tvCity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-condensed"
+                    android:text="Voronezh"
+                    android:textColor="@color/white"
+                    android:textSize="40sp"
+                    app:layout_constraintEnd_toStartOf="@+id/constraintLayout"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <TextView
+                    android:id="@+id/tvCondition"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-condensed"
+                    android:text="Sunny"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:visibility="gone"
+                    app:layout_constraintVertical_bias="0.0"
+                    tools:ignore="MissingConstraints" />
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="24dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="MissingConstraints">
+
+                    <ImageView
+                        android:id="@+id/imWeather"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/ic_android_black_24dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/tvCurrentTemp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="MissingConstraints" />
+
+                    <TextView
+                        android:id="@+id/tvMaxMin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-condensed"
+                        android:text="34 C / 15 C"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tvCurrentTemp" />
+
+                    <TextView
+                        android:id="@+id/tvCurrentTemp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-condensed"
+                        android:text="20 C"
+                        android:textColor="@color/white"
+                        android:textSize="48sp"
+                        app:layout_constraintStart_toEndOf="@+id/imWeather"
+                        tools:layout_editor_absoluteY="0dp" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="5dp"
+            app:layout_constraintEnd_toEndOf="@+id/cardView2"
+            app:layout_constraintStart_toStartOf="@+id/cardView2"
+            app:layout_constraintTop_toBottomOf="@+id/cardView2">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:scrollbars="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:layout_marginTop="8dp">
+
+            <TextView
+                android:id="@+id/textView2"
+                style="@style/text_header_small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="10dp"
+                app:drawableStartCompat="@drawable/ic_step_light"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="@+id/textView2"
+                app:layout_constraintStart_toStartOf="@+id/textView2"
+                app:layout_constraintTop_toBottomOf="@+id/textView2"
+                tools:ignore="MissingConstraints">
+
+                <com.robinhood.ticker.TickerView
+                    android:id="@+id/tv_tiker_meters"
+                    style="@style/text_header_big"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="0"/>
+
+                <TextView
+                    android:id="@+id/textViewDubl"
+                    style="@style/text_header_small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/meters" />
+
+            </LinearLayout>
+
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintGuide_end="198dp"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/textView4"
+                style="@style/text_header_small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="30dp"
+                android:layout_marginTop="10dp"
+                app:drawableStartCompat="@drawable/ic_kkal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="MissingConstraints" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="@+id/textView4"
+                app:layout_constraintStart_toStartOf="@+id/textView4"
+                app:layout_constraintTop_toBottomOf="@+id/textView4"
+                tools:ignore="MissingConstraints">
+
+                <com.robinhood.ticker.TickerView
+                    android:id="@+id/tv_tiker_kalorii"
+                    style="@style/text_header_big"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="0"/>
+
+                <TextView
+                    android:id="@+id/textView4Dobl"
+                    style="@style/text_header_small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/kkal"
+                    app:layout_constraintStart_toStartOf="@+id/guideline3"
+                    app:layout_constraintTop_toTopOf="@+id/textView2" />
+
+            </LinearLayout>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_round"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:layout_marginTop="8dp"
+                app:cardCornerRadius="120dp"
+                app:cardElevation="@dimen/elevation"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="MissingConstraints">
+
+                <com.vsu.fedosova.stepcounter.ui.custom_view.TickerAndProgressView
+                    android:id="@+id/ticker_and_progrss"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="@drawable/background_with_corner_radius_light" />
+
+            </androidx.cardview.widget.CardView>
+
+            <ImageView
+                android:id="@+id/bt_delete"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="144dp"
+                android:layout_weight="1"
+                android:padding="7dp"
+                app:layout_constraintEnd_toEndOf="@+id/textView2"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/textView2"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
+                app:srcCompat="@drawable/ic_delete_light" />
+
+            <ImageView
+                android:id="@+id/bt_save"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="7dp"
+                app:layout_constraintEnd_toEndOf="@+id/textView4"
+                app:layout_constraintStart_toStartOf="@+id/textView4"
+                app:layout_constraintTop_toTopOf="@+id/bt_delete"
+                app:srcCompat="@drawable/ic_save_light" />
+
+            <ImageView
+                android:id="@+id/bt_setting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="4dp"
+                app:layout_constraintBottom_toTopOf="@+id/bt_save"
+                app:layout_constraintEnd_toEndOf="@+id/bt_save"
+                app:layout_constraintStart_toStartOf="@+id/bt_save"
+                app:srcCompat="@drawable/baseline_settings_24" />
+
+
+<!--            <LinearLayout-->
+<!--                android:id="@+id/linearLayout2"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="@dimen/button_height"-->
+<!--                android:layout_marginHorizontal="8dp"-->
+<!--                android:background="@drawable/background_with_corner_radius_light"-->
+<!--                android:elevation="@dimen/elevation"-->
+<!--                android:orientation="horizontal"-->
+<!--                android:visibility="gone"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/cv_round">-->
+
+<!--                <ImageView-->
+<!--                    android:id="@+id/bt_setting"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:padding="4dp"-->
+<!--                    app:srcCompat="@drawable/ic_settings_light" />-->
+
+
+<!--            </LinearLayout>-->
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_statistika_shagov"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingHorizontal="10dp"
+                android:layoutAnimation="@anim/anim_layout_adapter"
+                tools:listitem="@layout/adapter_steps"
+                android:background="@drawable/background_with_corner_radius_light"
+                android:backgroundTint="@color/heavy_clouds">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+        </RelativeLayout>
+
+
+
+        <TextView
+            android:id="@+id/tv_no_statistics_data"
+            style="@style/text_header_small"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="@string/am_no_data"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_no_user_data"
+            style="@style/text_header_small"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="@string/am_no_user_data"
+            android:visibility="gone" />
+
+
+
+    </LinearLayout>
+
+
+
+</FrameLayout>

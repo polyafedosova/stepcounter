@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="red">#F44336</color>
+
+    <color name="transparent">#00000000</color>
+    <color name="black_10">#1A000000</color>
+    <color name="heavy_clouds">#8B80F8</color>
+<!--    <color name="heavy_clouds">#1D3245</color>-->
+    <color name="snow">#EEF5FA</color>
+    <color name="white">#FFFFFF</color>
+    <color name="dd">#03A9F4</color>
+
+
+    <color name="purple">#8B80F8</color>
+    <color name="purple_bg">#6D61DD</color>
+    <color name="white_bg">#F0F3FA</color>
+    <color name="purple_weather">#AF8EFF</color>
+
+</resources>

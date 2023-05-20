@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Stepcounter</string>
+
+    <string name="kkal">kkal</string>
+    <string name="km">km</string>
+    <string name="meters">metrs</string>
+
+    <string name="default_text_counter">0</string>
+
+    //dper - dialog permission
+    <string name="dper_ban_forever">to grant permission, go to the app settings yourself</string>
+    <string name="dper_no_permission">NO PERMISSION</string>
+    <string name="dper_message">In order for the app to be able to count your steps, you need permission to work with the motion-tracking sensor</string>
+    <string name="dper_allow">allow</string>
+    <string name="dper_restart">restart the application</string>
+
+    //am - activity main
+    <string name="am_no_data">no statistics</string>
+    <string name="am_no_user_data">the pedometer cannot start until you keep your data</string>
+
+    /dstat - dialog statistics
+    <string name="dstat_no_data">no statistics</string>
+
+    //dsettings - dialog settings
+    <string name="write_null">You can\'t enter 0</string>
+    <string name="write_only_numers">only numbers can be entered</string>
+    <string name="no_data">enter data</string>
+
+    //notificatiom
+    <string name="notification_ticker">"steps: %1$d"</string>
+    <string name="notification_header">"don't be lazy."</string>
+
+    //dialog fragmen nastroyki
+    <string name="dfset_default_hint_edit_text">- - -</string>
+    <string name="dfset_header_data_entry">enter your data</string>
+    <string name="dfset_header_enter_height">your height in cm</string>
+    <string name="dfset_header_enter_weight">your weight in kg</string>
+    <string name="dfset_header_plane_steps">daily target in steps</string>
+    <string name="dfset_bt_save">save</string>
+
+    //dialog fragment statisitka
+    <string name="dfs_header_statistics">step statistics</string>
+    <string name="dfs_bt_7_day">7 day</string>
+    <string name="dfs_bt_30_day">30 day</string>
+    <string name="dfs_bt_90_day">90 day</string>
+    <string name="dfs_header_on_average_per_day">on average per day</string>
+    <string name="dfs_header_sum">total</string>
+
+    //merge view step km kkal
+    <string name="default_merge_view_steps">steps: 0</string>
+    <string name="default_merge_view_kkal">kkal: 0.0</string>
+    <string name="default_merge_view_km">km: 0.0</string>
+    <string name="merge_view_steps">steps: %1$s</string>
+    <string name="merge_view_km">km: %1$s</string>
+    <string name="merge_view_kkal">kkal: %1$s</string>
+
+    //recycler view
+    <string name="default_0_kkal">0.0 kkal</string>
+    <string name="default_0_steps">0 steps</string>
+    <string name="default_0_km">0.0 km</string>
+    <string name="recycler_view_kkal">%1$s kkal</string>
+    <string name="recycler_view_steps">%1$s steps</string>
+    <string name="recycler_view_km">%1$s km</string>
+
+    //ticer and progress view
+    <string name="default_plane_steps_on_day">plane\n10000</string>
+    <string name="steps_plane_on_day">plane\n%1$s</string>
+
+    //snack bar delete
+    <string name="snack_bar_delete_header">Do you really want to delete\nall the data?</string>
+    <string name="snack_bar_delete_action">DELETE</string>
+
+</resources>

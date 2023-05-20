@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/stepsFragment"
+        android:icon="@drawable/baseline_directions_run_24"
+        android:title="Steps" />
+    <item
+        android:id="@+id/statisticFragment"
+        android:icon="@drawable/baseline_query_stats_24"
+        android:title="Statistic"  />
+
+</menu>

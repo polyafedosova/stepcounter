@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.vsu.fedosova.stepcounter.ui.screens.dialog_statistics.StatisticFragment">
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/dfs_header_statistics"
+        style="@style/text_header_big"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <HorizontalScrollView
+        android:id="@+id/horizontalScrollView2"
+        android:layout_width="0dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="8dp"
+        android:scrollbarThumbVertical="@color/heavy_clouds"
+        android:scrollbarTrackVertical="@color/heavy_clouds"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <im.dacer.androidcharts.LineView
+                android:id="@+id/grafic"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="8dp" />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <com.google.android.material.button.MaterialButtonToggleGroup
+        android:id="@+id/toggleButton"
+        android:layout_width="0dp"
+        android:layout_height="42dp"
+        android:layout_marginHorizontal="16dp"
+        android:gravity="center"
+        app:checkedButton="@id/bt_7day"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView2"
+        app:selectionRequired="true"
+        app:singleSelection="true">
+
+        <Button
+            android:id="@+id/bt_7day"
+            style="@style/ToggleButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/dfs_bt_7_day"
+            app:strokeColor="@color/heavy_clouds" />
+
+        <Button
+            android:id="@+id/bt_30day"
+            style="@style/ToggleButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/dfs_bt_30_day"
+            app:strokeColor="@color/heavy_clouds" />
+
+        <Button
+            android:id="@+id/bt_90day"
+            style="@style/ToggleButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/dfs_bt_90_day"
+            app:strokeColor="@color/heavy_clouds" />
+
+
+    </com.google.android.material.button.MaterialButtonToggleGroup>
+
+
+    <TextView
+        android:id="@+id/tv_no_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/dstat_no_data"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/toggleButton"
+        app:layout_constraintEnd_toEndOf="@+id/horizontalScrollView2"
+        app:layout_constraintStart_toStartOf="@+id/horizontalScrollView2"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <TextView
+        android:id="@+id/textView6"
+        style="@style/text_header_big"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/dfs_header_sum"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toggleButton" />
+
+    <View
+        android:id="@+id/divider1"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/heavy_clouds"
+        app:layout_constraintEnd_toEndOf="@+id/divider2"
+        app:layout_constraintStart_toStartOf="@+id/divider2"
+        app:layout_constraintTop_toBottomOf="@+id/statistics_all_time" />
+
+    <com.vsu.fedosova.stepcounter.ui.custom_view.TextStepKmKkal
+        android:id="@+id/statistics_all_time"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/divider2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/divider2"
+        app:layout_constraintTop_toBottomOf="@+id/divider2" />
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="12dp"
+        android:background="@color/heavy_clouds"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+    <TextView
+        android:id="@+id/textView5"
+        style="@style/text_header_big"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/dfs_header_on_average_per_day"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider1" />
+
+    <View
+        android:id="@+id/divider3"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/heavy_clouds"
+        app:layout_constraintEnd_toEndOf="@+id/divider1"
+        app:layout_constraintStart_toStartOf="@+id/divider1"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+    <com.vsu.fedosova.stepcounter.ui.custom_view.TextStepKmKkal
+        android:id="@+id/statistika_srednem_za_den"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/divider3"
+        app:layout_constraintStart_toStartOf="@+id/divider3"
+        app:layout_constraintTop_toBottomOf="@+id/divider3" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="32dp"
+        android:background="@color/heavy_clouds"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/divider3"
+        app:layout_constraintStart_toStartOf="@+id/divider3"
+        app:layout_constraintTop_toBottomOf="@+id/statistika_srednem_za_den" />
+
+
+<!--    <ImageView-->
+<!--        android:id="@+id/bt_setting"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginEnd="32dp"-->
+<!--        android:layout_weight="1"-->
+<!--        android:padding="4dp"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/divider"-->
+<!--        app:layout_constraintVertical_bias="0.555"-->
+<!--        app:srcCompat="@drawable/baseline_settings_24" />-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -13,4 +13,4 @@ Stepcounter - это инновационное мобильное прилож�
 
 * [Презентация](https://disk.yandex.ru/i/W_Mtv5N7BpZXZA)<br />
 
-* [Видео - обзор](https://disk.yandex.ru/client/disk/%D0%A8%D0%B0%D0%B3%D0%BE%D0%BC%D0%B5%D1%80?idApp=client&dialog=slider&idDialog=%2Fdisk%2F%D0%A8%D0%B0%D0%B3%D0%BE%D0%BC%D0%B5%D1%80%2F%D0%A8%D0%B0%D0%B3%D0%BE%D0%BC%D0%B5%D1%80.mp4)<br />
+* [Видео - обзор](https://disk.yandex.ru/i/o3BQRiywwqpVsg)<br />

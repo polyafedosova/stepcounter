@@ -11,6 +11,6 @@ Stepcounter - это инновационное мобильное прилож�
 
 # Обзор приложения
 
-* [Презентация](https://github.com/polyafedosova/stepcounter/blob/master/documentation/%D0%9F%D1%80%D0%B5%D0%B7%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D1%8F%20%D1%88%D0%B0%D0%B3%D0%BE%D0%BC%D0%B5%D1%80.pdf)<br />
+* [Презентация](https://disk.yandex.ru/i/W_Mtv5N7BpZXZA)<br />
 
 * [Видео - обзор](https://disk.yandex.ru/client/disk/%D0%A8%D0%B0%D0%B3%D0%BE%D0%BC%D0%B5%D1%80?idApp=client&dialog=slider&idDialog=%2Fdisk%2F%D0%A8%D0%B0%D0%B3%D0%BE%D0%BC%D0%B5%D1%80%2F%D0%A8%D0%B0%D0%B3%D0%BE%D0%BC%D0%B5%D1%80.mp4)<br />
